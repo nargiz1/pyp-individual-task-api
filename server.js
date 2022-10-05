@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors())
 
 mongoose.connect(
   "mongodb+srv://nargiz:TJs8EvLYoatpqkNs@cluster0.0j2opo0.mongodb.net/users",

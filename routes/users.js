@@ -20,7 +20,6 @@ router.get("/", (req, res) => {
 
   User.find()
     .select(select)
-    .populate("category")
     .skip(skip)
     .limit(limit)
     .exec((err, docs) => {
